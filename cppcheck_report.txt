@@ -1,0 +1,287 @@
+freebsd_test/nginx_link_function_module.c:1897:38: warning: Either the condition 'r==NULL' is redundant or there is possible null pointer dereference: r. [nullPointerRedundantCheck]
+        ngx_log_error(NGX_LOG_EMERG, r->connection->log, 0, "Invalid Session access");
+                                     ^
+freebsd_test/nginx_link_function_module.c:1896:11: note: Assuming that condition 'r==NULL' is not redundant
+    if (r == NULL) {
+          ^
+freebsd_test/nginx_link_function_module.c:1897:38: note: Null pointer dereference
+        ngx_log_error(NGX_LOG_EMERG, r->connection->log, 0, "Invalid Session access");
+                                     ^
+freebsd_test/nginx_link_function_module.c:832:30: style: Variable '*(void**)(&func)' is reassigned a value before the old one has been used. [redundantAssignment]
+            *(void**)(&func) = dlsym(scf->_app, (const char*)"ngx_link_func_exit_cycle");
+                             ^
+freebsd_test/nginx_link_function_module.c:820:30: note: *(void**)(&func) is assigned
+            *(void**)(&func) = dlsym(scf->_app, (const char*)"ngx_link_func_init_cycle");
+                             ^
+freebsd_test/nginx_link_function_module.c:832:30: note: *(void**)(&func) is overwritten
+            *(void**)(&func) = dlsym(scf->_app, (const char*)"ngx_link_func_exit_cycle");
+                             ^
+freebsd_test/nginx_link_function_module.c:749:5: style:inconclusive: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+    ngx_conf_log_error(NGX_LOG_EMERG, cf,  0, "%s", "the ngx_http_link_func_module.h might not be latest or not found in the c header path, \
+    ^
+freebsd_test/nginx_link_function_module.c:971:36: style: The scope of the variable 'scf' can be reduced. [variableScope]
+    ngx_http_link_func_srv_conf_t *scf;
+                                   ^
+freebsd_test/nginx_link_function_module.c:1868:12: style: The scope of the variable 'header_len' can be reduced. [variableScope]
+    size_t header_len;
+           ^
+freebsd_test/nginx_link_function_module.c:1973:9: style: The scope of the variable 'len' can be reduced. [variableScope]
+    int len, pos;
+        ^
+freebsd_test/nginx_link_function_module.c:1973:14: style: The scope of the variable 'pos' can be reduced. [variableScope]
+    int len, pos;
+             ^
+freebsd_test/nginx_link_function_module.c:2114:11: style: The scope of the variable 'old_value' can be reduced. [variableScope]
+    void *old_value;
+          ^
+freebsd_test/nginx_link_function_module.c:2168:11: style: The scope of the variable 'old_value' can be reduced. [variableScope]
+    void *old_value;
+          ^
+freebsd_test/nginx_link_function_module.c:2407:30: style: The scope of the variable 'tempBuff' can be reduced. [variableScope]
+    char *final_buf = NULL, *tempBuff;
+                             ^
+freebsd_test/nginx_link_function_module.c:2187:26: style:inconclusive: Function 'ngx_link_func_write_resp_l' argument 1 names different: declaration 'ctx' definition 'appctx'. [funcArgNamesDifferent]
+    ngx_link_func_ctx_t *appctx,
+                         ^
+freebsd_test/nginx_link_function_module.c:240:54: note: Function 'ngx_link_func_write_resp_l' argument 1 names different: declaration 'ctx' definition 'appctx'.
+void ngx_link_func_write_resp_l(ngx_link_func_ctx_t *ctx, uintptr_t status_code, const char* status_line,
+                                                     ^
+freebsd_test/nginx_link_function_module.c:2187:26: note: Function 'ngx_link_func_write_resp_l' argument 1 names different: declaration 'ctx' definition 'appctx'.
+    ngx_link_func_ctx_t *appctx,
+                         ^
+freebsd_test/nginx_link_function_module.c:2247:26: style:inconclusive: Function 'ngx_link_func_write_resp' argument 1 names different: declaration 'ctx' definition 'appctx'. [funcArgNamesDifferent]
+    ngx_link_func_ctx_t *appctx,
+                         ^
+freebsd_test/nginx_link_function_module.c:239:52: note: Function 'ngx_link_func_write_resp' argument 1 names different: declaration 'ctx' definition 'appctx'.
+void ngx_link_func_write_resp(ngx_link_func_ctx_t *ctx, uintptr_t status_code, const char* status_line, const char* content_type, const char* resp_content, size_t resp_len);
+                                                   ^
+freebsd_test/nginx_link_function_module.c:2247:26: note: Function 'ngx_link_func_write_resp' argument 1 names different: declaration 'ctx' definition 'appctx'.
+    ngx_link_func_ctx_t *appctx,
+                         ^
+freebsd_test/nginx_link_function_module.c:944:30: style: Local variable 'q' shadows outer variable [shadowVariable]
+                ngx_queue_t* q = ngx_queue_head(scf->_link_func_locs_queue);
+                             ^
+freebsd_test/nginx_link_function_module.c:916:26: note: Shadowed declaration
+            ngx_queue_t* q;
+                         ^
+freebsd_test/nginx_link_function_module.c:944:30: note: Shadow variable
+                ngx_queue_t* q = ngx_queue_head(scf->_link_func_locs_queue);
+                             ^
+src/ngx_link_func_module.c:1910:38: warning: Either the condition 'r==NULL' is redundant or there is possible null pointer dereference: r. [nullPointerRedundantCheck]
+        ngx_log_error(NGX_LOG_EMERG, r->connection->log, 0, "Invalid Session access");
+                                     ^
+src/ngx_link_func_module.c:1909:11: note: Assuming that condition 'r==NULL' is not redundant
+    if (r == NULL) {
+          ^
+src/ngx_link_func_module.c:1910:38: note: Null pointer dereference
+        ngx_log_error(NGX_LOG_EMERG, r->connection->log, 0, "Invalid Session access");
+                                     ^
+src/ngx_link_func_module.c:833:30: style: Variable '*(void**)(&func)' is reassigned a value before the old one has been used. [redundantAssignment]
+            *(void**)(&func) = dlsym(scf->_app, (const char*)"ngx_link_func_exit_cycle");
+                             ^
+src/ngx_link_func_module.c:821:30: note: *(void**)(&func) is assigned
+            *(void**)(&func) = dlsym(scf->_app, (const char*)"ngx_link_func_init_cycle");
+                             ^
+src/ngx_link_func_module.c:833:30: note: *(void**)(&func) is overwritten
+            *(void**)(&func) = dlsym(scf->_app, (const char*)"ngx_link_func_exit_cycle");
+                             ^
+src/ngx_link_func_module.c:756:5: style:inconclusive: Consecutive return, break, continue, goto or throw statements are unnecessary. [duplicateBreak]
+    return NGX_OK;
+    ^
+src/ngx_link_func_module.c:972:36: style: The scope of the variable 'scf' can be reduced. [variableScope]
+    ngx_http_link_func_srv_conf_t *scf;
+                                   ^
+src/ngx_link_func_module.c:1881:12: style: The scope of the variable 'header_len' can be reduced. [variableScope]
+    size_t header_len;
+           ^
+src/ngx_link_func_module.c:1986:9: style: The scope of the variable 'len' can be reduced. [variableScope]
+    int len, pos;
+        ^
+src/ngx_link_func_module.c:1986:14: style: The scope of the variable 'pos' can be reduced. [variableScope]
+    int len, pos;
+             ^
+src/ngx_link_func_module.c:2127:11: style: The scope of the variable 'old_value' can be reduced. [variableScope]
+    void *old_value;
+          ^
+src/ngx_link_func_module.c:2181:11: style: The scope of the variable 'old_value' can be reduced. [variableScope]
+    void *old_value;
+          ^
+src/ngx_link_func_module.c:2420:30: style: The scope of the variable 'tempBuff' can be reduced. [variableScope]
+    char *final_buf = NULL, *tempBuff;
+                             ^
+src/ngx_link_func_module.c:1808:52: style:inconclusive: Function 'ngx_link_func_cyc_log_debug' argument 1 names different: declaration 'ctx' definition 'cyc'. [funcArgNamesDifferent]
+ngx_link_func_cyc_log_debug(ngx_link_func_cycle_t *cyc, const char* msg) {
+                                                   ^
+src/ngx_link_func_module.h:84:64: note: Function 'ngx_link_func_cyc_log_debug' argument 1 names different: declaration 'ctx' definition 'cyc'.
+extern void ngx_link_func_cyc_log_debug(ngx_link_func_cycle_t *ctx, const char* msg);
+                                                               ^
+src/ngx_link_func_module.c:1808:52: note: Function 'ngx_link_func_cyc_log_debug' argument 1 names different: declaration 'ctx' definition 'cyc'.
+ngx_link_func_cyc_log_debug(ngx_link_func_cycle_t *cyc, const char* msg) {
+                                                   ^
+src/ngx_link_func_module.c:1812:51: style:inconclusive: Function 'ngx_link_func_cyc_log_info' argument 1 names different: declaration 'ctx' definition 'cyc'. [funcArgNamesDifferent]
+ngx_link_func_cyc_log_info(ngx_link_func_cycle_t *cyc, const char* msg) {
+                                                  ^
+src/ngx_link_func_module.h:85:63: note: Function 'ngx_link_func_cyc_log_info' argument 1 names different: declaration 'ctx' definition 'cyc'.
+extern void ngx_link_func_cyc_log_info(ngx_link_func_cycle_t *ctx, const char* msg);
+                                                              ^
+src/ngx_link_func_module.c:1812:51: note: Function 'ngx_link_func_cyc_log_info' argument 1 names different: declaration 'ctx' definition 'cyc'.
+ngx_link_func_cyc_log_info(ngx_link_func_cycle_t *cyc, const char* msg) {
+                                                  ^
+src/ngx_link_func_module.c:1816:51: style:inconclusive: Function 'ngx_link_func_cyc_log_warn' argument 1 names different: declaration 'ctx' definition 'cyc'. [funcArgNamesDifferent]
+ngx_link_func_cyc_log_warn(ngx_link_func_cycle_t *cyc, const char* msg) {
+                                                  ^
+src/ngx_link_func_module.h:86:63: note: Function 'ngx_link_func_cyc_log_warn' argument 1 names different: declaration 'ctx' definition 'cyc'.
+extern void ngx_link_func_cyc_log_warn(ngx_link_func_cycle_t *ctx, const char* msg);
+                                                              ^
+src/ngx_link_func_module.c:1816:51: note: Function 'ngx_link_func_cyc_log_warn' argument 1 names different: declaration 'ctx' definition 'cyc'.
+ngx_link_func_cyc_log_warn(ngx_link_func_cycle_t *cyc, const char* msg) {
+                                                  ^
+src/ngx_link_func_module.c:1820:50: style:inconclusive: Function 'ngx_link_func_cyc_log_err' argument 1 names different: declaration 'ctx' definition 'cyc'. [funcArgNamesDifferent]
+ngx_link_func_cyc_log_err(ngx_link_func_cycle_t *cyc, const char* msg) {
+                                                 ^
+src/ngx_link_func_module.h:87:62: note: Function 'ngx_link_func_cyc_log_err' argument 1 names different: declaration 'ctx' definition 'cyc'.
+extern void ngx_link_func_cyc_log_err(ngx_link_func_cycle_t *ctx, const char* msg);
+                                                             ^
+src/ngx_link_func_module.c:1820:50: note: Function 'ngx_link_func_cyc_log_err' argument 1 names different: declaration 'ctx' definition 'cyc'.
+ngx_link_func_cyc_log_err(ngx_link_func_cycle_t *cyc, const char* msg) {
+                                                 ^
+src/ngx_link_func_module.c:1939:51: style:inconclusive: Function 'ngx_link_func_cyc_get_prop' argument 1 names different: declaration 'ctx' definition 'cyc'. [funcArgNamesDifferent]
+ngx_link_func_cyc_get_prop(ngx_link_func_cycle_t *cyc, const char *key, size_t keylen) {
+                                                  ^
+src/ngx_link_func_module.h:83:66: note: Function 'ngx_link_func_cyc_get_prop' argument 1 names different: declaration 'ctx' definition 'cyc'.
+extern u_char* ngx_link_func_cyc_get_prop(ngx_link_func_cycle_t *ctx, const char *key, size_t keylen);
+                                                                 ^
+src/ngx_link_func_module.c:1939:51: note: Function 'ngx_link_func_cyc_get_prop' argument 1 names different: declaration 'ctx' definition 'cyc'.
+ngx_link_func_cyc_get_prop(ngx_link_func_cycle_t *cyc, const char *key, size_t keylen) {
+                                                  ^
+src/ngx_link_func_module.c:2200:26: style:inconclusive: Function 'ngx_link_func_write_resp_l' argument 1 names different: declaration 'ctx' definition 'appctx'. [funcArgNamesDifferent]
+    ngx_link_func_ctx_t *appctx,
+                         ^
+src/ngx_link_func_module.h:133:26: note: Function 'ngx_link_func_write_resp_l' argument 1 names different: declaration 'ctx' definition 'appctx'.
+    ngx_link_func_ctx_t *ctx,
+                         ^
+src/ngx_link_func_module.c:2200:26: note: Function 'ngx_link_func_write_resp_l' argument 1 names different: declaration 'ctx' definition 'appctx'.
+    ngx_link_func_ctx_t *appctx,
+                         ^
+src/ngx_link_func_module.c:2260:26: style:inconclusive: Function 'ngx_link_func_write_resp' argument 1 names different: declaration 'ctx' definition 'appctx'. [funcArgNamesDifferent]
+    ngx_link_func_ctx_t *appctx,
+                         ^
+src/ngx_link_func_module.h:124:26: note: Function 'ngx_link_func_write_resp' argument 1 names different: declaration 'ctx' definition 'appctx'.
+    ngx_link_func_ctx_t *ctx,
+                         ^
+src/ngx_link_func_module.c:2260:26: note: Function 'ngx_link_func_write_resp' argument 1 names different: declaration 'ctx' definition 'appctx'.
+    ngx_link_func_ctx_t *appctx,
+                         ^
+src/ngx_link_func_module.c:945:30: style: Local variable 'q' shadows outer variable [shadowVariable]
+                ngx_queue_t* q = ngx_queue_head(scf->_link_func_locs_queue);
+                             ^
+src/ngx_link_func_module.c:917:26: note: Shadowed declaration
+            ngx_queue_t* q;
+                         ^
+src/ngx_link_func_module.c:945:30: note: Shadow variable
+                ngx_queue_t* q = ngx_queue_head(scf->_link_func_locs_queue);
+                             ^
+build_test_resources/linkfuntest.c:102:0: style: The function 'my_app_simple_get_args' is never used. [unusedFunction]
+
+^
+build_test_resources/linkfuntest.c:281:0: style: The function 'my_app_simple_get_cache' is never used. [unusedFunction]
+
+^
+build_test_resources/linkfuntest.c:115:0: style: The function 'my_app_simple_get_calloc_from_pool' is never used. [unusedFunction]
+
+^
+build_test_resources/linkfuntest.c:39:0: style: The function 'my_app_simple_get_delay_greeting' is never used. [unusedFunction]
+
+^
+build_test_resources/linkfuntest.c:24:0: style: The function 'my_app_simple_get_greeting' is never used. [unusedFunction]
+
+^
+build_test_resources/linkfuntest.c:132:0: style: The function 'my_app_simple_get_header_param' is never used. [unusedFunction]
+
+^
+build_test_resources/linkfuntest.c:298:0: style: The function 'my_app_simple_get_no_resp' is never used. [unusedFunction]
+
+^
+build_test_resources/linkfuntest.c:78:0: style: The function 'my_app_simple_get_prop_greeting' is never used. [unusedFunction]
+
+^
+build_test_resources/linkfuntest.c:204:0: style: The function 'my_app_simple_get_token_args' is never used. [unusedFunction]
+
+^
+build_test_resources/linkfuntest.c:54:0: style: The function 'my_app_simple_get_uri' is never used. [unusedFunction]
+
+^
+build_test_resources/linkfuntest.c:230:0: style: The function 'my_app_simple_post' is never used. [unusedFunction]
+
+^
+build_test_resources/linkfuntest.c:258:0: style: The function 'my_app_simple_set_cache' is never used. [unusedFunction]
+
+^
+build_test_resources/linkfuntest.c:153:0: style: The function 'my_simple_authentication' is never used. [unusedFunction]
+
+^
+build_test_resources/linkfuntest.c:190:0: style: The function 'my_simple_extra_foo_header_output' is never used. [unusedFunction]
+
+^
+freebsd_test/nginx_link_function_module.c:2111:0: style: The function 'ngx_link_func_cache_put' is never used. [unusedFunction]
+
+^
+freebsd_test/nginx_link_function_module.c:1926:0: style: The function 'ngx_link_func_cyc_get_prop' is never used. [unusedFunction]
+
+^
+freebsd_test/nginx_link_function_module.c:1807:0: style: The function 'ngx_link_func_cyc_log_debug' is never used. [unusedFunction]
+
+^
+freebsd_test/nginx_link_function_module.c:1819:0: style: The function 'ngx_link_func_cyc_log_err' is never used. [unusedFunction]
+
+^
+freebsd_test/nginx_link_function_module.c:1811:0: style: The function 'ngx_link_func_cyc_log_info' is never used. [unusedFunction]
+
+^
+freebsd_test/nginx_link_function_module.c:1815:0: style: The function 'ngx_link_func_cyc_log_warn' is never used. [unusedFunction]
+
+^
+build_test_resources/linkfuntest.c:304:0: style: The function 'ngx_link_func_exit_cycle' is never used. [unusedFunction]
+
+^
+build_test_resources/linkfuntest.c:18:0: style: The function 'ngx_link_func_init_cycle' is never used. [unusedFunction]
+
+^
+freebsd_test/nginx_link_function_module.c:1824:0: style: The function 'ngx_link_func_log_debug' is never used. [unusedFunction]
+
+^
+freebsd_test/nginx_link_function_module.c:1836:0: style: The function 'ngx_link_func_log_err' is never used. [unusedFunction]
+
+^
+freebsd_test/nginx_link_function_module.c:1832:0: style: The function 'ngx_link_func_log_warn' is never used. [unusedFunction]
+
+^
+freebsd_test/nginx_link_function_module.c:1998:0: style: The function 'ngx_link_func_palloc' is never used. [unusedFunction]
+
+^
+freebsd_test/nginx_link_function_module.c:2073:0: style: The function 'ngx_link_func_shm_alloc' is never used. [unusedFunction]
+
+^
+freebsd_test/nginx_link_function_module.c:2083:0: style: The function 'ngx_link_func_shm_alloc_locked' is never used. [unusedFunction]
+
+^
+freebsd_test/nginx_link_function_module.c:2078:0: style: The function 'ngx_link_func_shm_free' is never used. [unusedFunction]
+
+^
+freebsd_test/nginx_link_function_module.c:2088:0: style: The function 'ngx_link_func_shm_free_locked' is never used. [unusedFunction]
+
+^
+freebsd_test/nginx_link_function_module.c:2061:0: style: The function 'ngx_link_func_shmtx_lock' is never used. [unusedFunction]
+
+^
+freebsd_test/nginx_link_function_module.c:2056:0: style: The function 'ngx_link_func_shmtx_trylock' is never used. [unusedFunction]
+
+^
+freebsd_test/nginx_link_function_module.c:2067:0: style: The function 'ngx_link_func_shmtx_unlock' is never used. [unusedFunction]
+
+^
+freebsd_test/nginx_link_function_module.c:1841:0: style: The function 'ngx_link_func_strdup' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingIncludeSystem]
+
